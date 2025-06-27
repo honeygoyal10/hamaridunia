@@ -47,14 +47,23 @@
       text-decoration: underline;
       color: #1b5e20;
     }
-    footer {
-      background-color: #2e7d32; color: white; padding: 15px;
-      text-align: center; margin-top: 40px;
-    }
+  footer {
+  background-color: #2e7d32;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  margin-top: 40px;
+}
 
-    <div class="col-md-3">
-  <img src="imagegod/ramji.jpg" alt="राम जी">
-</div>
+.news-card img,
+.aarti-section .col-md-3 img {
+  width: 100%;
+  height: 180px;         /* सभी इमेज एक जैसी ऊँचाई में रहेंगी */
+  object-fit: cover;     /* जानकारी को distort किए बिना fill करेगी */
+  border-radius: 5px;    /* design के अनुरूप है */
+}
+
+
 
   </style>
 </head>
