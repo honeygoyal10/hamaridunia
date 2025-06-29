@@ -38,7 +38,6 @@
     }
     .aarti-link:hover { color: #1b5e20; }
 
-    /* ✅ Image Frame Fix */
     .col-md-3 img {
       display: block;
       margin: auto;
@@ -63,7 +62,7 @@
 </head>
 <body>
 
-<!-- NAVBAR -->
+<!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center" href="/index.html">
@@ -79,35 +78,27 @@
     <div class="collapse navbar-collapse" id="mainNavbar">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item"><a class="nav-link" href="/index.html">होम</a></li>
-        <!-- Aarti Dropdown -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="aartiDropdown" role="button" data-toggle="dropdown">आरती</a>
           <div class="dropdown-menu">
             <a class="dropdown-item" href="#aarti">आरती संग्रह</a>
-            <a class="dropdown-item" href="aarti/amba_ji_ki_aarti.html">अम्बा जी</a>
-            <a class="dropdown-item" href="aarti/durga_ji_ki_aarti.html">दुर्गा जी</a>
-            <a class="dropdown-item" href="aarti/ganesh_ji_ki_aarti.html">गणेश जी</a>
             <a class="dropdown-item" href="aarti/hanuman_ji_ki_aarti.html">हनुमान जी</a>
+            <a class="dropdown-item" href="aarti/ganesh_ji_ki_aarti.html">गणेश जी</a>
+            <a class="dropdown-item" href="aarti/laxmi_ji_ki_aarti.html">लक्ष्मी जी</a>
+            <a class="dropdown-item" href="aarti/sarswati_ji_ki_aarti.html">सरस्वती जी</a>
+            <a class="dropdown-item" href="aarti/durga_ji_ki_aarti.html">दुर्गा जी</a>
+            <a class="dropdown-item" href="aarti/shiv_ji_ki_aarti.html">शिव जी</a>
+            <a class="dropdown-item" href="aarti/ram_ji_ki_aarti.html">राम जी</a>
+            <a class="dropdown-item" href="aarti/santoshi_ji_ki_aarti.html">संतोषी माता</a>
+            <a class="dropdown-item" href="aarti/satynarayan_ji_ki_aarti.html">सत्यनारायण जी</a>
+            <a class="dropdown-item" href="aarti/tulsi_ji_ki_aarti.html">तुलसी जी</a>
             <a class="dropdown-item" href="aarti/jagdish_ji_ki_aarti.html">जगदीश जी</a>
             <a class="dropdown-item" href="aarti/kunjbihari_ji_ki_aarti.html">कुंजबिहारी जी</a>
-            <a class="dropdown-item" href="aarti/laxmi_ji_ki_aarti.html">लक्ष्मी जी</a>
-            <a class="dropdown-item" href="aarti/ram_ji_ki_aarti.html">राम जी</a>
+            <a class="dropdown-item" href="aarti/amba_ji_ki_aarti.html">अम्बा जी</a>
             <a class="dropdown-item" href="aarti/rameshwar-baba-aarti.html">रमेश्वर बाबा</a>
-            <a class="dropdown-item" href="aarti/santoshi_ji_ki_aarti.html">संतोषी जी</a>
-            <a class="dropdown-item" href="aarti/sarswati_ji_ki_aarti.html">सरस्वती जी</a>
-            <a class="dropdown-item" href="aarti/satynarayan_ji_ki_aarti.html">सत्यनारायण जी</a>
-            <a class="dropdown-item" href="aarti/shiv_ji_ki_aarti.html">शिव जी</a>
-            <a class="dropdown-item" href="aarti/tulsi_ji_ki_aarti.html">तुलसी जी</a>
           </div>
         </li>
-        <!-- Chalisa Dropdown -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="chalisaDropdown" role="button" data-toggle="dropdown">चालीसा</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#chalisa">चालीसा संग्रह</a>
-            <a class="dropdown-item" href="chalisa/hanuman-chalisa.html">हनुमान चालीसा</a>
-          </div>
-        </li>
+        <li class="nav-item"><a class="nav-link" href="#chalisa">चालीसा</a></li>
       </ul>
     </div>
   </div>
@@ -120,51 +111,133 @@
   </marquee>
 </div>
 
-<!-- Aarti Section -->
+<!-- Aarti Section Title -->
 <div class="container" id="aarti">
   <h2 class="section-title">आरती संग्रह</h2>
 
   <div class="row text-center">
-    <div class="col-md-3"><img src="/imagegod/hanumanji.jpg"><a href="aarti/hanuman_ji_ki_aarti.html" class="aarti-link">हनुमान जी</a></div>
-    <div class="col-md-3"><img src="/imagegod/laxmiji.jpg"><a href="aarti/laxmi_ji_ki_aarti.html" class="aarti-link">लक्ष्मी जी</a></div>
-    <div class="col-md-3"><img src="/imagegod/shivji.jpg"><a href="aarti/shiv_ji_ki_aarti.html" class="aarti-link">शिव जी</a></div>
-    <div class="col-md-3"><img src="/imagegod/durgaji.jpg"><a href="aarti/durga_ji_ki_aarti.html" class="aarti-link">दुर्गा जी</a></div>
+    <div class="col-md-3">
+      <img src="/imagegod/hanumanji.jpg">
+      <a href="aarti/hanuman_ji_ki_aarti.html" class="aarti-link">हनुमान जी</a>
+    </div>
+    <div class="col-md-3">
+      <img src="/imagegod/ganeshji.jpg">
+      <a href="aarti/ganesh_ji_ki_aarti.html" class="aarti-link">गणेश जी</a>
+    </div>
+    <div class="col-md-3">
+      <img src="/imagegod/laxmiji.jpg">
+      <a href="aarti/laxmi_ji_ki_aarti.html" class="aarti-link">लक्ष्मी जी</a>
+    </div>
+    <div class="col-md-3">
+      <img src="/imagegod/sarswati.jpg">
+      <a href="aarti/sarswati_ji_ki_aarti.html" class="aarti-link">सरस्वती जी</a>
+    </div>
+  </div>1
+  <div class="row text-center mt-4">
+    <div class="col-md-3">
+      <img src="/imagegod/durgaji.jpg">
+      <a href="aarti/durga_ji_ki_aarti.html" class="aarti-link">दुर्गा जी</a>
+    </div>
+    <div class="col-md-3">
+      <img src="/imagegod/shivji.jpg">
+      <a href="aarti/shiv_ji_ki_aarti.html" class="aarti-link">शिव जी</a>
+    </div>
+    <div class="col-md-3">
+      <img src="/imagegod/ramji.jpg">
+      <a href="aarti/ram_ji_ki_aarti.html" class="aarti-link">राम जी</a>
+    </div>
+    <div class="col-md-3">
+      <img src="/imagegod/santoshi.jpg">
+      <a href="aarti/santoshi_ji_ki_aarti.html" class="aarti-link">संतोषी माता</a>
+    </div>
   </div>
 
-  <!-- ✅ Ad Block -->
-  <div class="container text-center my-3">
+  <!-- Google Ad Section -->
+  <div class="container text-center my-4">
     <ins class="adsbygoogle"
          style="display:block"
          data-ad-client="ca-pub-7484916970507651"
          data-ad-slot="1234567890"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
   </div>
 
-  <div class="row text-center">
-    <div class="col-md-3"><img src="/imagegod/ganeshji.jpg"><a href="aarti/ganesh_ji_ki_aarti.html" class="aarti-link">गणेश जी</a></div>
-    <div class="col-md-3"><img src="/imagegod/sarswati.jpg"><a href="aarti/sarswati_ji_ki_aarti.html" class="aarti-link">सरस्वती जी</a></div>
-    <div class="col-md-3"><img src="/imagegod/ramji.jpg"><a href="aarti/ram_ji_ki_aarti.html" class="aarti-link">राम जी</a></div>
-    <div class="col-md-3"><img src="/imagegod/satyanarayan.jpg"><a href="aarti/satynarayan_ji_ki_aarti.html" class="aarti-link">सत्यनारायण जी</a></div>
+  <!-- More Aarti Images -->
+  <div class="row text-center mt-4">
+    <div class="col-md-3">
+      <img src="/imagegod/satyanarayan.jpg">
+      <a href="aarti/satynarayan_ji_ki_aarti.html" class="aarti-link">सत्यनारायण जी</a>
+    </div>
+    <div class="col-md-3">
+      <img src="/imagegod/tulsiji.jpeg">
+      <a href="aarti/tulsi_ji_ki_aarti.html" class="aarti-link">तुलसी जी</a>
+    </div>
+    <div class="col-md-3">
+      <img src="/imagegod/jagdishji.jpg">
+      <a href="aarti/jagdish_ji_ki_aarti.html" class="aarti-link">जगदीश जी</a>
+    </div>
+    <div class="col-md-3">
+      <img src="/imagegod/kunjbihari.jpg">
+      <a href="aarti/kunjbihari_ji_ki_aarti.html" class="aarti-link">कुंजबिहारी जी</a>
+    </div>
   </div>
-</div>
+  <div class="row text-center mt-4">
+    <div class="col-md-3">
+      <img src="/imagegod/ambaji.jpg">
+      <a href="aarti/amba_ji_ki_aarti.html" class="aarti-link">अम्बा जी</a>
+    </div>
+    <div class="col-md-3">
+      <img src="/imagegod/rameshwarbaba.jpg">
+      <a href="aarti/rameshwar-baba-aarti.html" class="aarti-link">रमेश्वर बाबा</a>
+    </div>
+  </div>
 
-<!-- Chalisa Section -->
-<div class="container" id="chalisa">
-  <h2 class="section-title">चालीसा संग्रह</h2>
+  <!-- Chalisa Section -->
+  <h2 class="section-title" id="chalisa">चालीसा संग्रह</h2>
   <div class="row text-center">
-    <div class="col-md-3"><img src="/imagegod/hanumanji.jpg"><a href="chalisa/hanuman-chalisa.html" class="aarti-link">हनुमान चालीसा</a></div>
+    <div class="col-md-3">
+      <img src="/imagegod/hanumanji.jpg">
+      <a href="chalisa/hanuman_chalisa.html" class="aarti-link">हनुमान चालीसा</a>
+    </div>
+    <div class="col-md-3">
+      <img src="/imagegod/durgaji.jpg">
+      <a href="chalisa/durga_chalisa.html" class="aarti-link">दुर्गा चालीसा</a>
+    </div>
+    <div class="col-md-3">
+      <img src="/imagegod/shivji.jpg">
+      <a href="chalisa/shiv_chalisa.html" class="aarti-link">शिव चालीसा</a>
+    </div>
+    <div class="col-md-3">
+      <img src="/imagegod/ramji.jpg">
+      <a href="chalisa/ram_chalisa.html" class="aarti-link">राम चालीसा</a>
+    </div>
   </div>
-</div>
+
+  <!-- Google Ad Section -->
+  <div class="container text-center my-4">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-7484916970507651"
+         data-ad-slot="1234567890"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+</div> <!-- container close -->
 
 <!-- Footer -->
-<footer>
-  &copy; 2025 HamariDunia | Design by honeyGoyal
+<footer class="text-center">
+  &copy; 2025 HamariDunia.in | Designed by Honey Goyal
 </footer>
 
-<!-- JS Scripts -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
