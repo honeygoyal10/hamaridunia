@@ -1,52 +1,75 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="hi">
 <head>
   <meta charset="UTF-8">
-  <title>हनुमान जी की आरती | HamariDunia</title>
+  <title>HamariDunia | आरती संग्रह</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="हनुमान जी की आरती का संपूर्ण पाठ हिंदी में। भक्तिभाव से पढ़ें और लाभ लें।">
-<meta property="og:title" content="हनुमान जी की आरती | HamariDunia">
-<meta property="og:image" content="/imagegod/hanumanji.jpg">
-<meta property="og:description" content="हनुमान जी की आरती का संपूर्ण पाठ हिंदी में।">
 
+  <!-- ✅ Google AdSense Script -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7484916970507651"
-        crossorigin="anonymous"></script>
+          crossorigin="anonymous"></script>
 
+  <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Hind&display=swap" rel="stylesheet">
+
   <style>
     body { font-family: 'Hind', sans-serif; background: #fff; color: #212529; }
     .navbar { background-color: #2e7d32; }
-    .navbar-brand img { height: 50px; margin-right: 10px; }
-    .navbar-brand span { color: white; font-weight: bold; font-size: 1.5rem; }
-    .tagline { font-size: 0.85rem; color: #c8f2d1; }
-    .nav-link { color: white !important; font-weight: 500; }
-    .breaking-bar {
-      background-color: #1b5e20;
-      color: white;
-      padding: 8px 16px;
-      font-weight: 600;
+    .navbar-brand img { max-height: 50px; margin-right: 10px; }
+    .nav-link, .dropdown-item { color: white !important; font-weight: 500; }
+    .dropdown-menu { background-color: #388e3c; }
+    .dropdown-item:hover { background-color: #2e7d32; color: #fff; }
+    .breaking-bar { background-color: #1b5e20; color: white; padding: 8px 16px; font-weight: 600; }
+    .section-title {
+      font-size: 1.75rem;
+      font-weight: bold;
+      color: #2e7d32;
+      margin-top: 40px;
+      margin-bottom: 30px;
+      text-align: center;
     }
-    .aarti-text { white-space: pre-line; padding: 10px; font-size: 1.1rem; }
-    footer { background: #2e7d32; color: white; padding: 15px; text-align: center; margin-top: 30px; }
+    .aarti-link {
+      text-decoration: none;
+      color: #212529;
+      font-weight: 600;
+      display: block;
+      text-align: center;
+      padding: 10px 0;
+    }
+    .aarti-link:hover { color: #1b5e20; }
 
-    .equal-image {
-    height: 200px;
-    width: 100%;
-    object-fit: cover;
-  }
-</style>
+    .col-md-3 img {
+      display: block;
+      margin: auto;
+      width: 100%;
+      max-height: 180px;
+      object-fit: contain;
+      background-color: #f9f9f9;
+      padding: 6px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background-color: #2e7d32;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
 
-<!-- ✅ Navbar -->
+<!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark">
   <div class="container">
-    <a class="navbar-brand d-flex align-items-center" href="#">
-       <img src="/images/logo.png" alt="HamariDunia Logo" style="height: 50px;">
+    <a class="navbar-brand d-flex align-items-center" href="/index.html">
+      <img src="/images/logo.png" alt="HamariDunia Logo">
       <div>
-        <span>HamariDunia</span><br>
-        <span class="tagline">एक कदम विश्वास की ओर</span>
+        <div style="font-size: 1.25rem; font-weight: bold;">HamariDunia</div>
+        <small style="font-size: 0.75rem; color: #ccc;">एक कदम विश्वास की ओर</small>
       </div>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar">
@@ -54,13 +77,34 @@
     </button>
     <div class="collapse navbar-collapse" id="mainNavbar">
       <ul class="navbar-nav ml-auto">
-       <li class="nav-item"><a class="nav-link" href="/index.html">होम</a></li>
-        <li class="nav-item"><a class="nav-link" href="/index.html">आरती</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">चालीसा</a></li>
+        <li class="nav-item"><a class="nav-link" href="/index.html">होम</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="aartiDropdown" role="button" data-toggle="dropdown">आरती</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#aarti">आरती संग्रह</a>
+            <a class="dropdown-item" href="aarti/hanuman_ji_ki_aarti.html">हनुमान जी</a>
+            <a class="dropdown-item" href="aarti/ganesh_ji_ki_aarti.html">गणेश जी</a>
+            <a class="dropdown-item" href="aarti/laxmi_ji_ki_aarti.html">लक्ष्मी जी</a>
+            <a class="dropdown-item" href="aarti/sarswati_ji_ki_aarti.html">सरस्वती जी</a>
+            <a class="dropdown-item" href="aarti/durga_ji_ki_aarti.html">दुर्गा जी</a>
+            <a class="dropdown-item" href="aarti/shiv_ji_ki_aarti.html">शिव जी</a>
+            <a class="dropdown-item" href="aarti/ram_ji_ki_aarti.html">राम जी</a>
+            <a class="dropdown-item" href="aarti/santoshi_ji_ki_aarti.html">संतोषी माता</a>
+            <a class="dropdown-item" href="aarti/satynarayan_ji_ki_aarti.html">सत्यनारायण जी</a>
+            <a class="dropdown-item" href="aarti/tulsi_ji_ki_aarti.html">तुलसी जी</a>
+            <a class="dropdown-item" href="aarti/jagdish_ji_ki_aarti.html">जगदीश जी</a>
+            <a class="dropdown-item" href="aarti/kunjbihari_ji_ki_aarti.html">कुंजबिहारी जी</a>
+            <a class="dropdown-item" href="aarti/amba_ji_ki_aarti.html">अम्बा जी</a>
+            <a class="dropdown-item" href="aarti/rameshwar-baba-aarti.html">रमेश्वर बाबा</a>
+            <a class="dropdown-item" href="aarti/radharani_ji_ki_aarti.html">राधा रानी की आरती</a>
+          </div>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#chalisa">चालीसा</a></li>
       </ul>
     </div>
   </div>
 </nav>
+
 
 <!-- ✅ Breaking News -->
 <div class="breaking-bar">
@@ -109,6 +153,21 @@
   </div>
 </div>
 
+<!-- Google Ad Section -->
+  <div class="container text-center my-4">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-7484916970507651"
+         data-ad-slot="1234567890"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+</div> <!-- container close -->
+
 <!-- ✅ Related Aarti Section -->
 <div class="container mb-4">
   <h4 class="mb-3">🔗 अन्य देवी-देवताओं की आरती</h4>
@@ -141,11 +200,14 @@
   </div>
 </div>
 
-<!-- ✅ Footer -->
-<footer>
-  &copy; 2025 HamariDunia | Developed by ChatGPT
+
+<!-- Footer -->
+<footer class="text-center">
+  &copy; 2025 HamariDunia.in | Designed by Honey Goyal
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
