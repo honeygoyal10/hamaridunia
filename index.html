@@ -2,236 +2,164 @@
 <html lang="hi">
 <head>
   <meta charset="UTF-8">
-  <title>HamariDunia | खबरें</title>
+  <title>HamariDunia | आरती संग्रह</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- ✅ Google AdSense loader script -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7484916970507651"
-          crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body { font-family: 'Hind', sans-serif; background: #fff; color: #212529; }
     .navbar { background-color: #2e7d32; }
     .navbar-brand img { max-height: 50px; margin-right: 10px; }
-    .navbar-brand span { color: white; font-weight: bold; font-size: 1.5rem; }
-    .tagline { font-size: 0.8rem; color: #d0f0d0; }
-    .nav-link { color: white !important; font-weight: 500; }
-    .breaking-bar {
-      background-color: #1b5e20;
-      color: white;
-      padding: 8px 16px;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-    }
+    .nav-link, .dropdown-item { color: white !important; font-weight: 500; }
+    .dropdown-menu { background-color: #388e3c; }
+    .dropdown-item:hover { background-color: #2e7d32; color: #fff; }
+    .breaking-bar { background-color: #1b5e20; color: white; padding: 8px 16px; font-weight: 600; }
     .section-title {
-      font-size: 1.25rem; font-weight: bold; color: #2e7d32;
-      margin-top: 30px; margin-bottom: 15px; border-bottom: 2px solid #cfcfcf; padding-bottom: 5px;
+      font-size: 1.75rem;
+      font-weight: bold;
+      color: #2e7d32;
+      margin-top: 40px;
+      margin-bottom: 30px;
+      text-align: center;
     }
-    
-    .news-card h5 { margin-top: 10px; font-size: 1rem; }
+    .card { margin-bottom: 20px; border: none; }
+    .card-img-top { height: 180px; object-fit: cover; border-radius: 5px; }
+    .aarti-link {
+      text-decoration: none;
+      color: #212529;
+      font-weight: 600;
+      display: block;
+      text-align: center;
+      padding: 10px 0;
+    }
+    .aarti-link:hover { color: #1b5e20; }
     .ad-placeholder {
       background: #e0f2f1;
       padding: 15px;
-      margin-top: 10px;
+      margin: 30px 0;
       text-align: center;
       font-weight: bold;
       color: #2e7d32;
     }
-    .khabar-link {
-      text-decoration: none;
-      color: #212529;
+    footer {
+      background-color: #2e7d32;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      margin-top: 40px;
     }
-    .khabar-link:hover {
-      text-decoration: underline;
-      color: #1b5e20;
-    }
-  footer {
-  background-color: #2e7d32;
-  color: white;
-  padding: 15px;
-  text-align: center;
-  margin-top: 40px;
-}
-
-.news-card img,
-.aarti-section .col-md-3 img {
-  width: 100%;
-  height: 180px;         /* सभी इमेज एक जैसी ऊँचाई में रहेंगी */
-  object-fit: cover;     /* जानकारी को distort किए बिना fill करेगी */
-  border-radius: 5px;    /* design के अनुरूप है */
-}
-
-
-
   </style>
 </head>
 <body>
-   
-   <nav class="navbar navbar-expand-lg navbar-dark">
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark">
   <div class="container">
-    <a class="navbar-brand d-flex align-items-center" href="index.html">
- <img src="/images/logo.png" alt="HamariDunia Logo" style="height: 50px;">
-  <div>
-    <div style="font-size: 1.25rem; font-weight: bold;">HamariDunia</div>
-    <small style="font-size: 0.75rem; color: #ccc;">एक कदम विश्वास की ओर</small>
-  </div>
-</a>
+    <a class="navbar-brand d-flex align-items-center" href="/index.html">
+      <img src="/images/logo.png" alt="HamariDunia Logo">
+      <div>
+        <div style="font-size: 1.25rem; font-weight: bold;">HamariDunia</div>
+        <small style="font-size: 0.75rem; color: #ccc;">एक कदम विश्वास की ओर</small>
+      </div>
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="mainNavbar">
       <ul class="navbar-nav ml-auto">
-  <li class="nav-item"><a class="nav-link" href="/index.html">होम</a></li>
-  <li class="nav-item"><a class="nav-link" href="/index.html#aarati">आरती</a></li> <!-- या आरती का पेज लिंक -->
-  <li class="nav-item"><a class="nav-link" href="/chalisa/hanuman-chalisa.html">चालीसा</a></li>
-</ul>
+        <li class="nav-item"><a class="nav-link" href="/index.html">होम</a></li>
 
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="aartiDropdown" role="button" data-toggle="dropdown">आरती</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#aarti">आरती संग्रह</a>
+            <a class="dropdown-item" href="aarti/amba_ji_ki_aarti.html">अम्बा जी</a>
+            <a class="dropdown-item" href="aarti/durga_ji_ki_aarti.html">दुर्गा जी</a>
+            <a class="dropdown-item" href="aarti/ganesh_ji_ki_aarti.html">गणेश जी</a>
+            <a class="dropdown-item" href="aarti/hanuman_ji_ki_aarti.html">हनुमान जी</a>
+            <a class="dropdown-item" href="aarti/jagdish_ji_ki_aarti.html">जगदीश जी</a>
+            <a class="dropdown-item" href="aarti/kunjbihari_ji_ki_aarti.html">कुंजबिहारी जी</a>
+            <a class="dropdown-item" href="aarti/laxmi_ji_ki_aarti.html">लक्ष्मी जी</a>
+            <a class="dropdown-item" href="aarti/ram_ji_ki_aarti.html">राम जी</a>
+            <a class="dropdown-item" href="aarti/rameshwar-baba-aarti.html">रमेश्वर बाबा</a>
+            <a class="dropdown-item" href="aarti/santoshi_ji_ki_aarti.html">संतोषी जी</a>
+            <a class="dropdown-item" href="aarti/sarswati_ji_ki_aarti.html">सरस्वती जी</a>
+            <a class="dropdown-item" href="aarti/satynarayan_ji_ki_aarti.html">सत्यनारायण जी</a>
+            <a class="dropdown-item" href="aarti/shiv_ji_ki_aarti.html">शिव जी</a>
+            <a class="dropdown-item" href="aarti/tulsi_ji_ki_aarti.html">तुलसी जी</a>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="chalisaDropdown" role="button" data-toggle="dropdown">चालीसा</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#chalisa">चालीसा संग्रह</a>
+            <a class="dropdown-item" href="chalisa/hanuman-chalisa.html">हनुमान चालीसा</a>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 </nav>
 
-<!-- ✅ Breaking News -->
+<!-- Marquee -->
 <div class="breaking-bar">
-  <marquee behavior="scroll" direction="Left" scrollamount="4">
-    🔴 आरती संग्रह :- सभी देवी देवता की आरती यहाँ से प्राप्त कर सकते हैं,प्रार्थना प्रभु की , प्रभु से
+  <marquee behavior="scroll" direction="left" scrollamount="4">
+    🔴 आरती संग्रह :- सभी देवी देवता की आरती यहाँ से प्राप्त कर सकते हैं, प्रार्थना प्रभु की।
   </marquee>
 </div>
 
-    <div class="container text-center my-3">
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-7484916970507651"
-       data-ad-slot="1234567890"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
+<!-- Aarti Sangrah -->
+<div class="container" id="aarti">
+  <h2 class="section-title">आरती संग्रह</h2>
 
-    <div class="container">
-      <!-- Aarti sections inserted here manually from canvas output -->
-      
-<!-- Copied section from canvas (output of previous update) -->
-<div class="row aarti-section">
-   <div class="col-md-3">
- <img src="imagegod/JAGDISHJI.jpg" alt="जगदीश जी">
-</div>
-  
-  <div class="col-md-3 d-flex flex-column justify-content-center">
-    <h2>जगदीश जी की आरती</h2>
-    <p>जगदीश जी की आरती के लिए नीचे दिए गए लिंक पर क्लिक करें</p>
-    <a href="aarti/jagdish_ji_ki_aarti.html" class="btn btn-success">Check more</a>
-  </div>
- <div class="col-md-3">
- <img src="imagegod/KUNCHBIHARI.jpg" alt="कुंजबिहारी जी">
-</div>
-
-  <div class="col-md-3 d-flex flex-column justify-content-center">
-    <h2>कुंजबिहारी जी की आरती</h2>
-    <p>कुंजबिहारी जी की आरती के लिए नीचे दिए गए लिंक पर क्लिक करें</p>
-    <a href="aarti/kunjbihari_ji_ki_aarti.html" class="btn btn-success">Check more</a>
-  </div>
-</div>
-<div class="row aarti-section">
-  <div class="col-md-3"><img src="imagegod/LAXMIJI.jpg" alt="लक्ष्मी जी"></div>
-  <div class="col-md-3 d-flex flex-column justify-content-center">
-    <h2>लक्ष्मी जी की आरती</h2>
-    <p>लक्ष्मी जी की आरती के लिए नीचे दिए गए लिंक पर क्लिक करें</p>
-    <a href="aarti/laxmi_ji_ki_aarti.html" class="btn btn-success">Check more</a>
-  </div>
- <div class="col-md-3">
- <img src="imagegod/ramji.jpg" alt="राम जी">
-</div>
-  
-
-  <div class="col-md-3 d-flex flex-column justify-content-center">
-    <h2>राम जी की आरती</h2>
-    <p>राम जी की आरती के लिए नीचे दिए गए लिंक पर क्लिक करें</p>
-    <a href="aarti/ram_ji_ki_aarti.html" class="btn btn-success">Check more</a>
-  </div>
-</div>
-<div class="container text-center my-3">
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-7484916970507651"
-       data-ad-slot="1234567890"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
-<div class="row aarti-section">
-  <div class="col-md-3">
- <img src="imagegod/sarswati.jpg" alt="सरस्वती जी">
-</div>
-  
-  <div class="col-md-3 d-flex flex-column justify-content-center">
-    <h2>सरस्वती जी की आरती</h2>
-    <p>सरस्वती जी की आरती के लिए नीचे दिए गए लिंक पर क्लिक करें</p>
-    <a href="aarti/sarswati_ji_ki_aarti.html" class="btn btn-success">Check more</a>
+  <div class="row text-center">
+    <div class="col-md-3"><div class="card"><img src="/imagegod/hanumanji.jpg" class="card-img-top"><a href="aarti/hanuman_ji_ki_aarti.html" class="aarti-link">हनुमान जी</a></div></div>
+    <div class="col-md-3"><div class="card"><img src="/imagegod/laxmiji.jpg" class="card-img-top"><a href="aarti/laxmi_ji_ki_aarti.html" class="aarti-link">लक्ष्मी जी</a></div></div>
+    <div class="col-md-3"><div class="card"><img src="/imagegod/shivji.jpg" class="card-img-top"><a href="aarti/shiv_ji_ki_aarti.html" class="aarti-link">शिव जी</a></div></div>
+    <div class="col-md-3"><div class="card"><img src="/imagegod/durgaji.jpg" class="card-img-top"><a href="aarti/durga_ji_ki_aarti.html" class="aarti-link">दुर्गा जी</a></div></div>
   </div>
 
-  <div class="col-md-3">
-<img src="imagegod/SATYNARANJI.jpg" alt="सत्यनारायण जी">
-</div>
-  
-  <div class="col-md-3 d-flex flex-column justify-content-center">
-    <h2>सत्यनारायण जी की आरती</h2>
-    <p>सत्यनारायण जी की आरती के लिए नीचे दिए गए लिंक पर क्लिक करें</p>
-    <a href="aarti/satynarayan_ji_ki_aarti.html" class="btn btn-success">Check more</a>
-  </div>
-</div>
-<div class="row aarti-section">
+  <div class="ad-placeholder">यहाँ पर विज्ञापन दिखाई देगा</div>
 
-  <div class="col-md-3">
-<img src="imagegod/SANTOSHJI.jpg" alt="संतोषी जी">
-</div>
-  
- 
-  <div class="col-md-3 d-flex flex-column justify-content-center">
-    <h2>संतोषी जी की आरती</h2>
-    <p>संतोषी जी की आरती के लिए नीचे दिए गए लिंक पर क्लिक करें</p>
-    <a href="aarti/santoshi_ji_ki_aarti.html" class="btn btn-success">Check more</a>
+  <div class="row text-center">
+    <div class="col-md-3"><div class="card"><img src="/imagegod/ganeshji.jpg" class="card-img-top"><a href="aarti/ganesh_ji_ki_aarti.html" class="aarti-link">गणेश जी</a></div></div>
+    <div class="col-md-3"><div class="card"><img src="/imagegod/sarswati.jpg" class="card-img-top"><a href="aarti/sarswati_ji_ki_aarti.html" class="aarti-link">सरस्वती जी</a></div></div>
+    <div class="col-md-3"><div class="card"><img src="/imagegod/ramji.jpg" class="card-img-top"><a href="aarti/ram_ji_ki_aarti.html" class="aarti-link">राम जी</a></div></div>
+    <div class="col-md-3"><div class="card"><img src="/imagegod/satyanarayan.jpg" class="card-img-top"><a href="aarti/satynarayan_ji_ki_aarti.html" class="aarti-link">सत्यनारायण जी</a></div></div>
   </div>
 
-  <div class="col-md-3">
-<img src="imagegod/TULsiji.jpeg" alt="तुलसी जी">
-</div>
-   
+  <div class="ad-placeholder">यहाँ पर विज्ञापन दिखाई देगा</div>
 
-  <div class="col-md-3 d-flex flex-column justify-content-center">
-    <h2>तुलसी जी की आरती</h2>
-    <p>तुलसी जी की आरती के लिए नीचे दिए गए लिंक पर क्लिक करें</p>
-    <a href="aarti/tulsi_ji_ki_aarti.html" class="btn btn-success">Check more</a>
-  </div>
-</div>
-<div class="row aarti-section">
- <div class="col-md-3">
-<img src="imagegod/SHIVJI.jpg" alt="शिव जी">
-</div>
-  
-  <div class="col-md-3 d-flex flex-column justify-content-center">
-    <h2>शिव जी की आरती</h2>
-    <p>शिव जी की आरती के लिए नीचे दिए गए लिंक पर क्लिक करें</p>
-    <a href="aarti/shiv_ji_ki_aarti.html" class="btn btn-success">Check more</a>
+  <div class="row text-center">
+    <div class="col-md-3"><div class="card"><img src="/imagegod/santoshi.jpg" class="card-img-top"><a href="aarti/santoshi_ji_ki_aarti.html" class="aarti-link">संतोषी जी</a></div></div>
+    <div class="col-md-3"><div class="card"><img src="/imagegod/tulsiji.jpeg" class="card-img-top"><a href="aarti/tulsi_ji_ki_aarti.html" class="aarti-link">तुलसी जी</a></div></div>
+    <div class="col-md-3"><div class="card"><img src="/imagegod/kunjbihari.jpg" class="card-img-top"><a href="aarti/kunjbihari_ji_ki_aarti.html" class="aarti-link">कुंजबिहारी जी</a></div></div>
+    <div class="col-md-3"><div class="card"><img src="/imagegod/jagdishji.jpg" class="card-img-top"><a href="aarti/jagdish_ji_ki_aarti.html" class="aarti-link">जगदीश जी</a></div></div>
   </div>
 </div>
 
+<!-- Chalisa Sangrah -->
+<div class="container" id="chalisa">
+  <h2 class="section-title">चालीसा संग्रह</h2>
+
+  <div class="row text-center">
+    <div class="col-md-3">
+      <div class="card">
+        <img src="/imagegod/hanumanji.jpg" class="card-img-top" alt="हनुमान चालीसा">
+        <a href="chalisa/hanuman-chalisa.html" class="aarti-link">हनुमान चालीसा</a>
+      </div>
     </div>
-
-    <div class="container text-center my-3">
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-7484916970507651"
-       data-ad-slot="1234567890"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
 </div>
 
-    <footer class="bg-dark text-white text-center py-2 mt-4">
-      &copy; honeyGoyal
-    </footer>
+<!-- Footer -->
+<footer>
+  &copy; 2025 HamariDunia | Design by honeyGoyal
+</footer>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
-  </body>
+<!-- JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
